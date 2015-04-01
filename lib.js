@@ -24,13 +24,13 @@ $(document).ready(function() {
     var pad = 70;
     for (i = 0; i < 3; i++) {
       if (i === 0) {
-        square(50, pad, y, black);
+        square(50, x, y, black);
       }
       else if ( i === 1) {
-        square(30, (pad + 60), (y + 10) , black);
+        square(30, (x + 60), (y + 10) , black);
       }
       else {
-        square(20, (pad + 100), (y + 15), black);
+        square(20, (x + 100), (y + 15), black);
       };
     }
   }
@@ -45,6 +45,7 @@ $(document).ready(function() {
     ctx.stroke();
   }
 
+  //greenSquares
   threeGreen(80, 100);
   threeGreen(110, 160);
   threeGreen(140, 160);
@@ -52,6 +53,8 @@ $(document).ready(function() {
   threeGreen(200, 160);
   threeGreen(230, 160);
   threeGreen(290, 200);
-  threeBlack(300, 300);
+
+  //blackSquares
+  threeBlack(600, 300);
 
 });
