@@ -4,14 +4,25 @@ $(document).ready(function() {
   //blur fix
   ctx.translate(0.5, 0.5);
   var green = "#548779";
-  ctx.beginPath();
-  ctx.rect(188, 50, 10, 10);
-  ctx.fillStyle = green;
-  ctx.fill();
-  ctx.lineWidth = .4;
-  ctx.strokeStyle = 'black';
-  ctx.stroke();
+
+  function threeSquare(x,y) {
+    var pad = 30;
+    for (i = 0; i < 3; i++) {
+      ctx.beginPath();
+      ctx.rect(x, y, 20, 20);
+      ctx.fillStyle = green;
+      ctx.fill();
+      ctx.lineWidth = .4;
+      ctx.strokeStyle = 'black';
+      ctx.stroke();
+      y += pad
+    }
+  }
+
+  threeSquare(100, 100);
+
 });
+
 
 
 
