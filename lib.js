@@ -59,4 +59,10 @@ $(document).ready(function() {
   threeBlack(295, 232);
   threeBlack(295, 278);
 
+  ctx.beginPath();
+  ctx.fillStyle = "#EFF0EB"
+  ctx.arc(475, 205, 85, 0, Math.PI*2, false);
+  ctx.closePath();
+  ctx.fill();
+
 });
