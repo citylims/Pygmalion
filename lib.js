@@ -34,6 +34,20 @@ $(document).ready(function() {
     }
   }
 
+  function insideSquare(x, y) {
+    for (i = 0; i < 2; i++) {
+      if (i === 0) {
+        square(40, x, y, black);
+      }
+      else {
+        x += 46
+        ctx.rect(x, y, 20, 40);
+        ctx.fillStyle = black
+        ctx.fill();
+      }
+    }
+  }
+
   function square(size, x, y, color) {
     ctx.beginPath();
     ctx.rect(x, y, size, size);
@@ -59,10 +73,17 @@ $(document).ready(function() {
   threeBlack(295, 232);
   threeBlack(295, 278);
 
+  insideSquare(400, 300)
+
+  //circle
   ctx.beginPath();
   ctx.fillStyle = "#EFF0EB"
   ctx.arc(475, 205, 85, 0, Math.PI*2, false);
   ctx.closePath();
   ctx.fill();
+
+  //insideSquares
+
+
 
 });
