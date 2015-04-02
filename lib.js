@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var canvas = document.getElementById("album");
   var ctx = canvas.getContext("2d");
-  var layer2 = document.getElementById("layer2");
+  var layer2 = document.getElementById("top-layer");
   var ctx2 = layer2.getContext("2d")
   //blur fix
   ctx.translate(0.5, 0.5);
@@ -40,12 +40,13 @@ $(document).ready(function() {
     for (i = 0; i < 2; i++) {
       if (i === 0) {
         square(40, x, y, black);
+
       }
       else {
         x += 46
-        ctx.rect(x, y, 20, 40);
-        ctx.fillStyle = black
-        ctx.fill();
+        ctx2.rect(x, y, 20, 40);
+        ctx2.fillStyle = black
+        ctx2.fill();
       }
     }
   }
@@ -75,23 +76,16 @@ $(document).ready(function() {
   threeBlack(295, 232);
   threeBlack(295, 278);
 
-  insideSquare(400, 300)
-
   //circle
   ctx.beginPath();
   ctx.fillStyle = "#EFF0EB"
-  ctx.arc(475, 205, 85, 0, Math.PI*2, false);
+  ctx.arc(480, 207, 90, 0, Math.PI*2, false);
   ctx.closePath();
   ctx.fill();
 
-  ctx2.beginPath();
-  ctx2.fillStyle = "black"
-  ctx2.arc(575, 305, 85, 0, Math.PI*2, false);
-  ctx2.closePath();
-  ctx2.fill();
-
-  //insideSquares
-
-
+  //layer2 draw
+  insideSquare(433, 140);
+  insideSquare(433, 188);
+  insideSquare(433, 235)
 
 });
