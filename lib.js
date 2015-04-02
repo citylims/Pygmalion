@@ -7,10 +7,10 @@ $(document).ready(function() {
   var black = "#1D1F21";
 
   function threeGreen(x,y) {
-    var pad = 30;
+    var pad = 25;
     for (i = 0; i < 3; i++) {
       ctx.beginPath();
-      ctx.rect(x, y, 20, 20);
+      ctx.rect(x, y, 16, 16);
       ctx.fillStyle = green;
       ctx.fill();
       ctx.lineWidth = .4;
@@ -21,16 +21,15 @@ $(document).ready(function() {
   }
 
   function threeBlack(x, y) {
-    var pad = 70;
     for (i = 0; i < 3; i++) {
       if (i === 0) {
-        square(50, x, y, black);
+        square(40, x, y, black);
       }
       else if ( i === 1) {
-        square(30, (x + 60), (y + 10) , black);
+        square(22, (x + 46), (y + 9) , black);
       }
       else {
-        square(20, (x + 100), (y + 15), black);
+        square(16, (x + 74), (y + 12), black);
       };
     }
   }
@@ -46,15 +45,18 @@ $(document).ready(function() {
   }
 
   //greenSquares
-  threeGreen(80, 100);
-  threeGreen(110, 160);
-  threeGreen(140, 160);
-  threeGreen(170, 200);
-  threeGreen(200, 160);
-  threeGreen(230, 160);
-  threeGreen(290, 200);
+  threeGreen(80, 110);
+  threeGreen(103, 160);
+  threeGreen(126, 160);
+  threeGreen(149, 194);
+  threeGreen(172, 160);
+  threeGreen(195, 160);
+  threeGreen(245, 194);
 
   //blackSquares
-  threeBlack(600, 300);
+  threeBlack(295, 140);
+  threeBlack(295, 186);
+  threeBlack(295, 232);
+  threeBlack(295, 278);
 
 });
