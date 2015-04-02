@@ -1,6 +1,8 @@
 $(document).ready(function() {
   var canvas = document.getElementById("album");
   var ctx = canvas.getContext("2d");
+  var layer2 = document.getElementById("layer2");
+  var ctx2 = layer2.getContext("2d")
   //blur fix
   ctx.translate(0.5, 0.5);
   var green = "#548779";
@@ -81,6 +83,12 @@ $(document).ready(function() {
   ctx.arc(475, 205, 85, 0, Math.PI*2, false);
   ctx.closePath();
   ctx.fill();
+
+  ctx2.beginPath();
+  ctx2.fillStyle = "black"
+  ctx2.arc(575, 305, 85, 0, Math.PI*2, false);
+  ctx2.closePath();
+  ctx2.fill();
 
   //insideSquares
 
