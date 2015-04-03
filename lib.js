@@ -83,9 +83,30 @@ $(document).ready(function() {
   ctx.closePath();
   ctx.fill();
 
+  //doublesquare
+  ctx.beginPath();
+  square(40, 100, 300, black);
+  square(40, 100, 360, black);
+  square(40, 170, 315, black);
+  square(40, 170, 350, black);
+  ctx.closePath();
+  ctx.beginPath();
+  ctx.lineWidth = 10;
+    ctx.moveTo(140, 320);
+    ctx.lineTo(150, 320);
+    ctx.lineTo(170, 320);
+    ctx.moveTo(160, 390);
+    ctx.lineTo(200, 390);
+    ctx.stroke();
+  ctx.closePath();
+
+
+
   //layer2 draw
   insideSquare(433, 140);
   insideSquare(433, 188);
-  insideSquare(433, 235)
+  insideSquare(433, 235);
+
+
 
 });
