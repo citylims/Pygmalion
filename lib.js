@@ -91,12 +91,13 @@ $(document).ready(function() {
   square(40, 170, 350, black);
   ctx.closePath();
   ctx.beginPath();
-  ctx.lineWidth = 10;
-    ctx.moveTo(140, 320);
-    ctx.lineTo(150, 320);
-    ctx.lineTo(170, 320);
-    ctx.moveTo(160, 390);
-    ctx.lineTo(200, 390);
+  ctx.lineWidth = 12;
+    ctx.moveTo(140, 321);
+    ctx.lineTo(200, 321);
+    ctx.moveTo(140, 384);
+    ctx.lineTo(200, 384);
+    ctx. moveTo(210, 351);
+    ctx.lineTo(280, 351);
     ctx.stroke();
   ctx.closePath();
 
