@@ -8,6 +8,7 @@ $(document).ready(function() {
   var green = "#548779";
   var black = "#1D1F21";
 
+
   function threeGreen(x,y) {
     var pad = 25;
     for (i = 0; i < 3; i++) {
@@ -49,10 +50,6 @@ $(document).ready(function() {
         ctx2.fill();
       }
     }
-  }
-
-  function offsetLines() {
-    
   }
 
   function square(size, x, y, color) {
@@ -106,13 +103,50 @@ $(document).ready(function() {
   ctx.closePath();
 
   //offset strokes bottom right
+  //box
   ctx.beginPath();
-  ctx.rect(550, 320, 40, 125);
-  ctx.fillStyle = black
-  ctx.fill();
+    ctx.rect(530, 315, 40, 162);
+    ctx.fillStyle = black
+    ctx.fill();
+  ctx.closePath
+  //lines
+  // ctx.beginPath();
+  // ctx.lineWidth = 12;
+  // ctx.moveTo(531, 321);
+  // ctx.lineTo(480, 321);
+  // ctx.stroke();
+  // ctx.closePath();
 
-  ctx.closePath();
+  function liner(x, y) {
+    ctx.beginPath();
+    ctx.lineWidth = 12;
+    ctx.moveTo(531, y);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    ctx.closePath();
+  }
+  liner();
 
+  function offsetLines() {
+    //top line values
+    var x = 480
+    var y = 321
+    for (var i = 0; i < 6; i++, y += 30) {
+      if (i === 0) {
+        liner(x,y);
+      }
+      else if ( i === 1 ) {
+        liner((x - 20), y);
+      }
+      else if ( i === 2 ) {
+        liner((x - 30), y);
+      }
+      else {
+        liner((x - 45), y);
+      }
+    }
+  }
+  offsetLines();
 
 
   //layer2 draw
