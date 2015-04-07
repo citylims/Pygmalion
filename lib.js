@@ -51,6 +51,10 @@ $(document).ready(function() {
     }
   }
 
+  function offsetLines() {
+    
+  }
+
   function square(size, x, y, color) {
     ctx.beginPath();
     ctx.rect(x, y, size, size);
@@ -99,6 +103,14 @@ $(document).ready(function() {
     ctx. moveTo(210, 351);
     ctx.lineTo(280, 351);
     ctx.stroke();
+  ctx.closePath();
+
+  //offset strokes bottom right
+  ctx.beginPath();
+  ctx.rect(550, 320, 40, 125);
+  ctx.fillStyle = black
+  ctx.fill();
+
   ctx.closePath();
 
 
