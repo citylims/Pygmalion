@@ -8,7 +8,6 @@ $(document).ready(function() {
   var green = "#548779";
   var black = "#1D1F21";
 
-
   function threeGreen(x,y) {
     var pad = 25;
     for (i = 0; i < 3; i++) {
@@ -109,14 +108,7 @@ $(document).ready(function() {
     ctx.fillStyle = black
     ctx.fill();
   ctx.closePath
-  //lines
-  // ctx.beginPath();
-  // ctx.lineWidth = 12;
-  // ctx.moveTo(531, 321);
-  // ctx.lineTo(480, 321);
-  // ctx.stroke();
-  // ctx.closePath();
-
+  //line init
   function liner(x, y) {
     ctx.beginPath();
     ctx.lineWidth = 12;
@@ -126,7 +118,7 @@ $(document).ready(function() {
     ctx.closePath();
   }
   liner();
-
+  //draw lines to box
   function offsetLines() {
     //top line values
     var x = 480
@@ -147,6 +139,13 @@ $(document).ready(function() {
     }
   }
   offsetLines();
+
+  //draw text
+
+  ctx.font = "28px Arial";
+  ctx.fillText("slowdive", 100, 480);
+
+
 
 
   //layer2 draw
