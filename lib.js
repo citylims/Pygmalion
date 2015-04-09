@@ -3,8 +3,11 @@ $(document).ready(function() {
   var ctx = canvas.getContext("2d");
   var layer2 = document.getElementById("top-layer");
   var ctx2 = layer2.getContext("2d")
-  //blur fix
+
+  //blur fix hack
   ctx.translate(0.5, 0.5);
+
+  //colors
   var green = "#548779";
   var black = "#1D1F21";
 
