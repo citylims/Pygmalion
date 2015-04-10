@@ -105,13 +105,15 @@ $(document).ready(function() {
   ctx.closePath();
 
   //offset strokes bottom right
-  //box
+
+    //box
   ctx.beginPath();
     ctx.rect(530, 315, 40, 162);
     ctx.fillStyle = black
     ctx.fill();
   ctx.closePath
-  //line init
+
+    //line init
   function liner(x, y) {
     ctx.beginPath();
     ctx.lineWidth = 12;
@@ -121,7 +123,8 @@ $(document).ready(function() {
     ctx.closePath();
   }
   liner();
-  //draw lines to box
+
+    //draw lines to box
   function offsetLines() {
     //top line values
     var x = 480
@@ -144,18 +147,11 @@ $(document).ready(function() {
   offsetLines();
 
   //draw text
-
   ctx.font = "28px Arial";
   ctx.fillText("slowdive", 100, 480);
-
-
-
 
   //layer2 draw
   insideSquare(433, 140);
   insideSquare(433, 188);
   insideSquare(433, 235);
-
-
-
 });
